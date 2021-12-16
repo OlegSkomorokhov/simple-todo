@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ToDoItem } from './todo.item';
+import { ToDoItem } from './shared/models/todo.item';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { ToDoItem } from './todo.item';
 export class AppComponent {
 
   title = 'Simple-ToDo';
-  
+
   itemsToDo: ToDoItem[] = [ new ToDoItem('Task 1'), new ToDoItem('Task 2'), new ToDoItem('Task 3') ];
 
   addItemToArray(item: ToDoItem)

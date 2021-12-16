@@ -25,12 +25,12 @@
   </div>
 
 
-  <app-todo-list [items]="itemsToDo" (edit)="edit.value = $event" (delete)="deleteItemFromArray($event)"></app-todo-list>
+  <todo-list [items]="itemsToDo" (edit)="edit.value = $event" (delete)="deleteItemFromArray($event)"></todo-list>
   <todo-add (add)="addItemToArray($event)" #edit></todo-add>
 
   <pre>{{ itemsToDo | json }}</pre>
 
-  
+
   <!-- Footer -->
   <footer>
       Love Angular?&nbsp;
