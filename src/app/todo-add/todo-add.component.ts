@@ -3,8 +3,7 @@ import { ToDoItem } from '../todo.item';
 
 @Component({
   selector: 'todo-add',
-  templateUrl: './todo-add.component.html',
-  styleUrls: ['./todo-add.component.css']
+  templateUrl: './todo-add.component.html'
 })
 export class TodoAddComponent implements OnInit {
 

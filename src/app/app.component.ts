@@ -7,7 +7,9 @@ import { ToDoItem } from './todo.item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'simple-todo';
+
+  title = 'Simple-ToDo';
+  
   itemsToDo: ToDoItem[] = [ new ToDoItem('Task 1'), new ToDoItem('Task 2'), new ToDoItem('Task 3') ];
 
   addItemToArray(item: ToDoItem)
