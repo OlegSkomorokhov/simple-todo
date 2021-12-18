@@ -5,23 +5,21 @@ import { ToDoItem } from '../../shared/models/todo.item';
   selector: 'todo-list',
   templateUrl: './todo-list.component.html'
 })
-export class TodoListComponent implements OnInit {
+export class TodoListComponent implements OnInit
+{
 
   @Input() items: ToDoItem[] = [];
-  @Output() edit: EventEmitter<ToDoItem> = new EventEmitter();
   @Output() delete: EventEmitter<ToDoItem> = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit(): void {
+  constructor() {
   }
 
-  editItem(item: ToDoItem)
+  ngOnInit(): void
   {
-    this.edit.emit(item);
+
   }
 
-  deleteItem(item: ToDoItem)
+  deleteItem(item: ToDoItem): void
   {
     this.delete.emit(item);
   }

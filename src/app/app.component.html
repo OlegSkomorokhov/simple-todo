@@ -25,10 +25,10 @@
   </div>
 
 
-  <todo-list [items]="itemsToDo" (edit)="edit.value = $event" (delete)="deleteItemFromArray($event)"></todo-list>
-  <todo-add (add)="addItemToArray($event)" #edit></todo-add>
+  <todo-list [items]="todo_items" (delete)="deleteToDo($event)"></todo-list>
+  <todo-add (add)="addToDo($event)" #edit></todo-add>
 
-  <pre>{{ itemsToDo | json }}</pre>
+  <pre>{{ todo_items | json }}</pre>
 
 
   <!-- Footer -->

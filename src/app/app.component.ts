@@ -10,16 +10,16 @@ export class AppComponent {
 
   title = 'Simple-ToDo';
 
-  itemsToDo: ToDoItem[] = [ new ToDoItem('Task 1'), new ToDoItem('Task 2'), new ToDoItem('Task 3') ];
+  todo_items: ToDoItem[] = [ new ToDoItem('Task 1'), new ToDoItem('Task 2'), new ToDoItem('Task 3') ];
 
-  addItemToArray(item: ToDoItem)
+  addToDo(item: ToDoItem)
   {
-    this.itemsToDo.push(item);
+    this.todo_items.push(item);
   }
 
-  deleteItemFromArray(item: ToDoItem)
+  deleteToDo(item: ToDoItem)
   {
-    this.itemsToDo.splice(this.itemsToDo.indexOf(item), 1);
+    this.todo_items.splice(this.todo_items.indexOf(item), 1);
   }
 
 }

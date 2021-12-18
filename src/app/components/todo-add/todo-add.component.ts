@@ -21,9 +21,4 @@ export class TodoAddComponent implements OnInit {
     this.value = new ToDoItem();
   }
 
-  editItem()
-  {
-    this.value = new ToDoItem();
-  }
-
 }
