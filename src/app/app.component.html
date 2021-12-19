@@ -25,10 +25,7 @@
   </div>
 
 
-  <todo-list [items]="todo_items" (delete)="deleteToDo($event)"></todo-list>
-  <todo-add (add)="addToDo($event)" #edit></todo-add>
-
-  <pre>{{ todo_items | json }}</pre>
+  <todo-tasks></todo-tasks>
 
 
   <!-- Footer -->
