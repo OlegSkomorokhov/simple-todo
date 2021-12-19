@@ -1,0 +1,3 @@
+<todo-filter (submit)="setFilterValues($event)"></todo-filter>
+<todo-list [items]="todo_items" [filterValues]="filterValues" (delete)="deleteToDo($event)"></todo-list>
+<todo-add (add)="addToDo($event)"></todo-add>

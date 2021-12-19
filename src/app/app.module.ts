@@ -3,20 +3,25 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoAddComponent } from './todo-add/todo-add.component';
+
+import { TodoAddComponent, TodoFilterComponent, TodoListComponent, TodoTasksComponent } from './components';
+import { TodoService } from './shared';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TodoTasksComponent,
     TodoListComponent,
-    TodoAddComponent
+    TodoAddComponent,
+    TodoFilterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    TodoService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,28 @@
+<div>
+    <table>
+        <thead>
+            <th>Описание</th>
+            <th>Категория</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of visible_items">
+                <td>
+                    {{ item.Text }}
+                </td>
+                <td>
+                    {{ item.CategoryName }}
+                </td>
+                <td>
+                    <button type="button" (click)="deleteItem(item)" style="margin-left: 10px;">Удалить</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="margin-top: 10px;">
+        <span>Вывод объектов списка:</span>
+        <pre>{{ visible_items | json }}</pre>
+    </div>
+
+</div>

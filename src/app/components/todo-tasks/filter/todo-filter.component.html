@@ -1,0 +1,22 @@
+<div>
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <input id="searchText" type="text" name="searchText" [(ngModel)]="values.Text" >
+                    </td>
+                    <td>
+                        <button type="button" (click)="Submit()">Поиск</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+    <div style="margin-top: 10px;">
+        <span>Вывод объекта модели фильтра:</span>
+        <pre>{{ values | json }}</pre>
+    </div>
+
+</div>
