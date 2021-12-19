@@ -16,13 +16,12 @@ export class TodoAddComponent implements OnInit {
     private todo: TodoService
   ) { }
 
-  ngOnInit(): void {
-
+  ngOnInit(): void
+  {
     this.todo_categories = this.todo.getCategories();
-
   }
 
-  categoryChange()
+  categoryChanged()
   {
     if (this.value && this.value.CategoryId)
     {

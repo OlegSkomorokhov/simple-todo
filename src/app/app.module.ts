@@ -4,18 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
-import { TodoTasksComponent } from './components';
-import { TodoListComponent } from './components/todo-tasks/list/todo-list.component';
-import { TodoAddComponent } from './components/todo-tasks/add/todo-add.component';
-
-import { TodoService } from './shared/services/todo.service';
+import { TodoAddComponent, TodoFilterComponent, TodoListComponent, TodoTasksComponent } from './components';
+import { TodoService } from './shared';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoTasksComponent,
     TodoListComponent,
-    TodoAddComponent
+    TodoAddComponent,
+    TodoFilterComponent
   ],
   imports: [
     BrowserModule,

@@ -15,7 +15,7 @@
                         <label for="categories">Категория: </label>
                     </td>
                     <td>
-                        <select id="categories" name="taskCategory" [(ngModel)]="value.CategoryId" (ngModelChange)="categoryChange()">
+                        <select id="categories" name="taskCategory" [(ngModel)]="value.CategoryId" (ngModelChange)="categoryChanged()">
                             <option *ngFor="let currentCategory of todo_categories" [attr.value]="currentCategory.Key">
                                 {{ currentCategory.Value }}
                             </option>

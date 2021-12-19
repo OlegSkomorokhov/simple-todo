@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ToDoItem } from 'src/app/shared';
 
 @Component({
@@ -13,16 +13,21 @@ export class TodoTasksComponent {
     new ToDoItem(1, 'Сегодня', 'Task 3')
   ];
 
-  constructor() { }
+  filterValues: ToDoItem = new ToDoItem();
+
+  setFilterValues(filter: ToDoItem)
+  {
+    this.filterValues = new ToDoItem(filter.CategoryId, filter.CategoryName, filter.Text);
+  }
 
   addToDo(item: ToDoItem)
   {
-    this.todo_items.push(item);
+    this.todo_items = this.todo_items.concat([ item ]);
   }
 
   deleteToDo(item: ToDoItem)
   {
-    this.todo_items.splice(this.todo_items.indexOf(item), 1);
+    this.todo_items = this.todo_items.filter(i => i.Text != item.Text);
   }
 
 }
