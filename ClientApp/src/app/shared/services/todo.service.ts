@@ -4,7 +4,8 @@ import { KeyValue } from '..';
 @Injectable({
   providedIn: 'root'
 })
-export class TodoService {
+export class TodoService
+{
 
   todo_categories: KeyValue[] = [
     new KeyValue(1, 'Сегодня'),

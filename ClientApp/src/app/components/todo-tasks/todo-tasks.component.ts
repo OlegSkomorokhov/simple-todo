@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { ToDoItem } from 'src/app/shared';
+import { Component, OnInit } from '@angular/core';
+import { CheckService, ToDoItem } from 'src/app/shared';
 
 @Component({
   selector: 'todo-tasks',
   templateUrl: './todo-tasks.component.html'
 })
-export class TodoTasksComponent {
-
+export class TodoTasksComponent implements OnInit
+{
   todo_items: ToDoItem[] = [
     new ToDoItem(1, 'Сегодня', 'Task 1'),
     new ToDoItem(1, 'Сегодня', 'Task 2'),
@@ -16,6 +16,19 @@ export class TodoTasksComponent {
   filterValues: ToDoItem = new ToDoItem();
 
   isShowModels: boolean = false;
+
+  backendServiceName: string = 'Loading...';
+
+  constructor(private _check: CheckService)
+  {}
+
+  ngOnInit(): void
+  {
+      this._check.getBackendServiceName().subscribe(data =>
+        {
+            this.backendServiceName = data;
+        }, e => console.error(e));
+  }
 
   showHideModels()
   {
