@@ -15,6 +15,16 @@ export class TodoTasksComponent {
 
   filterValues: ToDoItem = new ToDoItem();
 
+  isShowModels: boolean = false;
+
+  showHideModels()
+  {
+    if (this.isShowModels)
+      this.isShowModels = false;
+    else
+      this.isShowModels = true;
+  }
+
   setFilterValues(filter: ToDoItem)
   {
     this.filterValues = new ToDoItem(filter.CategoryId, filter.CategoryName, filter.Text);

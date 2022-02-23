@@ -5,9 +5,11 @@ import { KeyValue, ToDoItem, TodoService } from '../../../shared';
   selector: 'todo-add',
   templateUrl: './todo-add.component.html'
 })
-export class TodoAddComponent implements OnInit {
-
+export class TodoAddComponent implements OnInit
+{
   @Input() value: ToDoItem = new ToDoItem();
+  @Input() showModels: boolean = false;
+
   @Output() add: EventEmitter<ToDoItem> = new EventEmitter();
 
   todo_categories: KeyValue[] = [];

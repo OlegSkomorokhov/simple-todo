@@ -10,6 +10,7 @@ export class TodoListComponent implements OnInit, OnChanges
 
   @Input() items: ToDoItem[] = [];
   @Input() filterValues: ToDoItem = new ToDoItem();
+  @Input() showModels: boolean = false;
 
   @Output() delete: EventEmitter<ToDoItem> = new EventEmitter();
 
