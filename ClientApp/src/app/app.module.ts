@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
 import { TodoAddComponent, TodoFilterComponent, TodoListComponent, TodoTasksComponent } from './components';
-import { TodoService } from './shared';
+
+import { CheckService, TodoService } from './shared';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { TodoService } from './shared';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     FormsModule
   ],
   providers: [
     TodoService,
+    CheckService
   ],
   bootstrap: [AppComponent]
 })
