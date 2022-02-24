@@ -1,0 +1,11 @@
+<div>
+    <todo-filter [showModels]="isShowModels" (submit)="setFilterValues($event)"></todo-filter>
+    <todo-list [items]="todo_items" [filterValues]="filterValues" [showModels]="isShowModels" (delete)="deleteToDo($event)"></todo-list>
+    <todo-add [showModels]="isShowModels" (add)="addToDo($event)"></todo-add>
+</div>
+<div style="text-align: center; margin-top: 10px;">
+    <button type="button" (click)="showHideModels()">{{ isShowModels ? 'Скрыть модели' : 'Показать модели' }}</button>
+</div>
+<div style="text-align: center; margin-top: 10px;">
+    <span>{{ backendString }}</span>
+</div>

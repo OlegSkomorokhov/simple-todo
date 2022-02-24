@@ -20,7 +20,7 @@
         </tbody>
     </table>
 
-    <div style="margin-top: 10px;">
+    <div *ngIf="showModels" style="margin-top: 10px;">
         <span>Вывод объектов списка:</span>
         <pre>{{ visible_items | json }}</pre>
     </div>

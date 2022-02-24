@@ -14,7 +14,7 @@
         </table>
     </form>
 
-    <div style="margin-top: 10px;">
+    <div *ngIf="showModels" style="margin-top: 10px;">
         <span>Вывод объекта модели фильтра:</span>
         <pre>{{ values | json }}</pre>
     </div>
